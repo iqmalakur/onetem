@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import { RouterLink } from "vue-router";
 
 const isOpen = ref(false);
 
 const menu = [
-  { title: "Home", href: "#home" },
-  { title: "About Us", href: "#about" },
-  { title: "Services", href: "#services" },
-  { title: "Portfolio", href: "#portfolio" },
-  { title: "Contact", href: "#contact" },
+  { title: "Home", href: "/" },
+  { title: "Services", href: "/services" },
+  { title: "Portfolio", href: "/portfolio" },
+  { title: "About Us", href: "/about" },
 ];
 
 const toggleMenu = () => {
@@ -25,12 +25,12 @@ const toggleMenu = () => {
       <!-- Desktop Menu -->
       <ul class="hidden md:flex items-center space-x-6 text-sm">
         <li v-for="m in menu" :key="m.title">
-          <a
-            :href="m.href"
+          <RouterLink
+            :to="m.href"
             class="text-gray-700 hover:text-primary-hover transition"
           >
             {{ m.title }}
-          </a>
+          </RouterLink>
         </li>
       </ul>
 
@@ -60,13 +60,13 @@ const toggleMenu = () => {
     <div v-show="isOpen" class="md:hidden bg-white border-t shadow-sm">
       <ul class="flex flex-col px-6 py-4 space-y-4 text-sm">
         <li v-for="m in menu" :key="m.title">
-          <a
-            :href="m.href"
-            class="block text-gray-700 hover:text-primary-hover transition"
+          <RouterLink
+            :to="m.href"
+            class="text-gray-700 hover:text-primary-hover transition"
             @click="isOpen = false"
           >
             {{ m.title }}
-          </a>
+          </RouterLink>
         </li>
       </ul>
     </div>
