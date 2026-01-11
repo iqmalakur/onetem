@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import ButtonCTA from "@/components/button/ButtonCTA.vue";
+import { whatsapp } from "@/data/social";
 </script>
 
 <template>
@@ -23,11 +24,9 @@ import ButtonCTA from "@/components/button/ButtonCTA.vue";
 
         <!-- CTA -->
         <div class="flex flex-wrap gap-4">
-          <ButtonCTA href="https://wa.me/628123456789" :external="true">
-            WhatsApp
-          </ButtonCTA>
+          <ButtonCTA :href="whatsapp" :external="true"> WhatsApp </ButtonCTA>
 
-          <ButtonCTA href="#services" :isPrimary="false">
+          <ButtonCTA href="/services" :isPrimary="false">
             Lihat Layanan
           </ButtonCTA>
         </div>

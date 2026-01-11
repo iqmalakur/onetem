@@ -5,6 +5,7 @@ import { services } from "@/data/services";
 <template>
   <section
     v-for="(service, index) in services"
+    :id="service.id"
     :key="index"
     class="max-w-6xl mx-auto px-6 mb-24"
   >

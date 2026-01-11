@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import { navigation } from "@/data/navigation";
+import { email, whatsapp } from "@/data/social";
+</script>
+
 <template>
   <footer class="bg-gray-900 text-gray-300">
     <div class="max-w-6xl mx-auto px-6 py-20">
@@ -49,19 +54,9 @@
         <div>
           <h5 class="text-sm font-semibold text-white mb-4">Company</h5>
           <ul class="space-y-3 text-sm">
-            <li>
-              <a href="#about" class="hover:text-white transition">
-                About Us
-              </a>
-            </li>
-            <li>
-              <a href="/portfolio" class="hover:text-white transition">
-                Portfolio
-              </a>
-            </li>
-            <li>
-              <a href="#contact" class="hover:text-white transition">
-                Contact
+            <li v-for="nav in navigation">
+              <a :href="nav.href" class="hover:text-white transition">
+                {{ nav.title }}
               </a>
             </li>
           </ul>
@@ -72,29 +67,17 @@
           <h5 class="text-sm font-semibold text-white mb-4">Hubungi Kami</h5>
           <ul class="space-y-3 text-sm">
             <li>
-              <a
-                href="mailto:hello@onetem.com"
-                class="hover:text-white transition"
-              >
-                hello@onetem.com
+              <a :href="email" class="hover:text-white transition">
+                {{ email }}
               </a>
             </li>
             <li>
               <a
-                href="https://wa.me/628123456789"
+                :href="whatsapp"
                 target="_blank"
                 class="hover:text-white transition"
               >
                 WhatsApp
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                class="hover:text-white transition"
-              >
-                LinkedIn
               </a>
             </li>
           </ul>

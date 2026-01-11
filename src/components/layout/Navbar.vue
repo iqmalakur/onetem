@@ -1,15 +1,9 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { RouterLink } from "vue-router";
+import { navigation } from "@/data/navigation";
 
 const isOpen = ref(false);
-
-const menu = [
-  { title: "Home", href: "/" },
-  { title: "Services", href: "/services" },
-  { title: "Portfolio", href: "/portfolio" },
-  { title: "About Us", href: "/about" },
-];
 
 const toggleMenu = () => {
   isOpen.value = !isOpen.value;
@@ -24,12 +18,12 @@ const toggleMenu = () => {
 
       <!-- Desktop Menu -->
       <ul class="hidden md:flex items-center space-x-6 text-sm">
-        <li v-for="m in menu" :key="m.title">
+        <li v-for="nav in navigation" :key="nav.title">
           <RouterLink
-            :to="m.href"
+            :to="nav.href"
             class="text-gray-700 hover:text-primary-hover transition"
           >
-            {{ m.title }}
+            {{ nav.title }}
           </RouterLink>
         </li>
       </ul>
@@ -59,13 +53,13 @@ const toggleMenu = () => {
     <!-- Mobile Menu -->
     <div v-show="isOpen" class="md:hidden bg-white border-t shadow-sm">
       <ul class="flex flex-col px-6 py-4 space-y-4 text-sm">
-        <li v-for="m in menu" :key="m.title">
+        <li v-for="nav in navigation" :key="nav.title">
           <RouterLink
-            :to="m.href"
+            :to="nav.href"
             class="text-gray-700 hover:text-primary-hover transition"
             @click="isOpen = false"
           >
-            {{ m.title }}
+            {{ nav.title }}
           </RouterLink>
         </li>
       </ul>

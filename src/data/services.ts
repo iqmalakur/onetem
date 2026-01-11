@@ -1,5 +1,6 @@
 export const services = [
   {
+    id: "website",
     title: "Website Development",
     subtitle: "Bangun Kesan Profesional dan Tingkatkan Kepercayaan Pelanggan",
     description:
@@ -19,6 +20,7 @@ export const services = [
   },
 
   {
+    id: "mobile-app",
     title: "Mobile App Development (Android)",
     subtitle: "Solusi Aplikasi untuk Operasional yang Lebih Efisien",
     description:
@@ -37,6 +39,7 @@ export const services = [
   },
 
   {
+    id: "automation",
     title: "Chatbot & Automation",
     subtitle: "Layanan Pelanggan Lebih Responsif, Tanpa Ribet",
     description:
@@ -55,6 +58,7 @@ export const services = [
   },
 
   {
+    id: "custom",
     title: "Custom Digital Solution",
     subtitle: "Karena Setiap Bisnis Punya Kebutuhan yang Berbeda",
     description:

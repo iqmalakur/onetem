@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import ButtonCTA from "@/components/button/ButtonCTA.vue";
+import { whatsapp } from "@/data/social";
 </script>
 
 <template>
@@ -14,11 +15,7 @@ import ButtonCTA from "@/components/button/ButtonCTA.vue";
         digital bareng <span class="font-semibold">OneTem</span>.
       </p>
 
-      <ButtonCTA
-        href="https://wa.me/628123456789"
-        :external="true"
-        :isPrimary="false"
-      >
+      <ButtonCTA :href="whatsapp" :external="true" :isPrimary="false">
         Hubungi Tim OneTem Sekarang
       </ButtonCTA>
     </div>

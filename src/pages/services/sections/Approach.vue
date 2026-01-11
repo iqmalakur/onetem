@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import ButtonCTA from "@/components/button/ButtonCTA.vue";
+import { whatsapp } from "@/data/social";
 </script>
 
 <template>
@@ -29,7 +30,7 @@ import ButtonCTA from "@/components/button/ButtonCTA.vue";
           Anda memetakan kebutuhan dan menemukan solusi terbaik.
         </p>
 
-        <ButtonCTA href="https://wa.me/62xxxxxxxxxx" :isPrimary="true">
+        <ButtonCTA :href="whatsapp" :isPrimary="true">
           Konsultasi Gratis dengan Tim OneTem
         </ButtonCTA>
       </div>
