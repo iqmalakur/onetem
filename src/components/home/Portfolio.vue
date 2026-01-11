@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import ButtonCTA from "../button/ButtonCTA.vue";
+</script>
+
 <template>
   <section id="portfolio" class="py-24 bg-white">
     <div class="max-w-6xl mx-auto px-6">
