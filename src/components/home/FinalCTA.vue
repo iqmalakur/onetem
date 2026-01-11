@@ -3,7 +3,7 @@ import ButtonCTA from "../button/ButtonCTA.vue";
 </script>
 
 <template>
-  <section class="py-28 bg-blue-600 text-white">
+  <section class="py-28 bg-primary text-white">
     <div class="max-w-6xl mx-auto px-6 text-center">
       <h3 class="text-3xl md:text-4xl font-bold mb-6">
         Siap Naik Level Lewat Solusi Digital yang Tepat?

@@ -1,10 +1,10 @@
 <template>
-  <section class="py-24 bg-gray-50">
+  <section class="py-24 bg-secondary">
     <div class="max-w-6xl mx-auto px-6">
       <!-- Heading -->
       <div class="max-w-3xl mb-14">
         <h3 class="text-3xl md:text-4xl font-bold leading-tight mb-4">
-          Di sinilah <span class="text-blue-600">OneTem</span> Berperan
+          Di sinilah <span class="text-primary">OneTem</span> Berperan
         </h3>
 
         <p class="text-gray-600 text-lg">
@@ -55,16 +55,16 @@
         </p>
 
         <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-          <div class="p-4 rounded-lg bg-gray-50">
+          <div class="p-4 rounded-lg bg-secondary">
             🧠 <span class="font-medium">Business & Tech Planning</span>
           </div>
-          <div class="p-4 rounded-lg bg-gray-50">
+          <div class="p-4 rounded-lg bg-secondary">
             🛠️ <span class="font-medium">Design & Development</span>
           </div>
-          <div class="p-4 rounded-lg bg-gray-50">
+          <div class="p-4 rounded-lg bg-secondary">
             🚀 <span class="font-medium">Implementation</span>
           </div>
-          <div class="p-4 rounded-lg bg-gray-50">
+          <div class="p-4 rounded-lg bg-secondary">
             🔄 <span class="font-medium">Maintenance & Growth</span>
           </div>
         </div>

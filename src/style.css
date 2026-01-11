@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  /* custom theme here */
-  /* --color-primary: ...; */
+  --color-primary: var(--color-blue-600);
+  --color-primary-hover: var(--color-blue-700);
+  --color-secondary: var(--color-gray-50);
+  --color-secondary-hover: var(--color-gray-100);
 }

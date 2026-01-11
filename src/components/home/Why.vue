@@ -1,11 +1,11 @@
 <template>
-  <section class="py-24 bg-gray-50">
+  <section class="py-24 bg-secondary">
     <div class="max-w-6xl mx-auto px-6">
       <!-- Heading -->
       <div class="max-w-3xl mb-16">
         <h3 class="text-3xl md:text-4xl font-bold leading-tight mb-4">
           Kenapa Banyak Startup & UMKM
-          <span class="text-blue-600">Cocok dengan OneTem?</span>
+          <span class="text-primary">Cocok dengan OneTem?</span>
         </h3>
 
         <p class="text-gray-600 text-lg">
@@ -84,7 +84,7 @@
       <div class="mt-16 max-w-3xl">
         <p class="text-lg font-medium">
           Kami tumbuh bareng klien,
-          <span class="text-blue-600 font-semibold">
+          <span class="text-primary font-semibold">
             bukan cuma selesai di satu project.
           </span>
         </p>

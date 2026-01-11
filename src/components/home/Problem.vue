@@ -5,7 +5,7 @@
       <div class="max-w-3xl mb-14">
         <h3 class="text-3xl md:text-4xl font-bold leading-tight mb-4">
           Punya Bisnis, Tapi Digitalisasinya Masih
-          <span class="text-blue-600">Setengah-Setengah?</span>
+          <span class="text-primary">Setengah-Setengah?</span>
         </h3>
 
         <p class="text-gray-600 text-lg">
@@ -59,7 +59,7 @@
       <div class="mt-14 max-w-3xl">
         <p class="text-lg font-medium">
           Kalau salah satunya relate,
-          <span class="text-blue-600 font-semibold">
+          <span class="text-primary font-semibold">
             berarti lo nggak sendirian.
           </span>
         </p>

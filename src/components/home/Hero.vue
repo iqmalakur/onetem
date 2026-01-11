@@ -3,13 +3,13 @@ import ButtonCTA from "../button/ButtonCTA.vue";
 </script>
 
 <template>
-  <section class="pt-32 pb-24 bg-gray-50">
+  <section class="pt-32 pb-24 bg-secondary">
     <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
       <!-- Left Content -->
       <div>
         <h1 class="text-3xl md:text-4xl font-bold leading-tight mb-6">
           Your End-to-End <br />
-          <span class="text-blue-600">Digital Solution Partner</span>
+          <span class="text-primary">Digital Solution Partner</span>
           <br />
           Satu Partner untuk Semua Kebutuhan Digital Bisnis Lo
         </h1>

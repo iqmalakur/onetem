@@ -20,8 +20,8 @@ const props = withDefaults(
     class="inline-flex items-center justify-center px-7 py-4 rounded-lg text-sm font-medium transition"
     :class="
       isPrimary
-        ? 'bg-blue-600 text-white hover:bg-blue-700'
-        : 'border bg-gray-50 border-gray-300 text-gray-800 hover:bg-gray-100'
+        ? 'bg-primary text-white hover:bg-primary-hover'
+        : 'border bg-secondary border-gray-300 text-gray-800 hover:bg-secondary-hover'
     "
   >
     <slot />

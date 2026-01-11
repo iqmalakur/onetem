@@ -8,7 +8,7 @@ import ButtonCTA from "../button/ButtonCTA.vue";
       <!-- Heading -->
       <div class="max-w-3xl mb-14">
         <h3 class="text-3xl md:text-4xl font-bold mb-4">
-          Apa yang Bisa <span class="text-blue-600">Kami Bantu?</span>
+          Apa yang Bisa <span class="text-primary">Kami Bantu?</span>
         </h3>
         <p class="text-gray-600 text-lg">
           Kami fokus ke solusi digital yang relevan, fungsional, dan benar-benar

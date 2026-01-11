@@ -5,7 +5,7 @@
       <div class="max-w-3xl mb-16">
         <h3 class="text-3xl md:text-4xl font-bold leading-tight mb-4">
           Beberapa Project yang Pernah
-          <span class="text-blue-600">Kami Kerjakan</span>
+          <span class="text-primary">Kami Kerjakan</span>
         </h3>
 
         <p class="text-gray-600 text-lg">
@@ -78,7 +78,7 @@
 
         <p class="mt-2 font-medium">
           paham masalah →
-          <span class="text-blue-600">cari solusi</span> → deliver dengan rapi
+          <span class="text-primary">cari solusi</span> → deliver dengan rapi
         </p>
       </div>
 
