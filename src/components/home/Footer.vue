@@ -105,7 +105,9 @@
       <div
         class="border-t border-gray-800 mt-16 pt-8 text-sm flex flex-col md:flex-row justify-between items-center gap-4"
       >
-        <p class="text-gray-500">© 2026 OneTem. All rights reserved.</p>
+        <p class="text-gray-500">
+          © {{ new Date().getFullYear() }} OneTem. All rights reserved.
+        </p>
 
         <p class="text-gray-500">Built with care for growing businesses.</p>
       </div>
