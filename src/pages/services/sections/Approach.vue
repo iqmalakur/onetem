@@ -30,7 +30,7 @@ import { whatsapp } from "@/data/social";
           Anda memetakan kebutuhan dan menemukan solusi terbaik.
         </p>
 
-        <ButtonCTA :href="whatsapp" :isPrimary="true">
+        <ButtonCTA :href="`https://wa.me/${whatsapp}`" :isPrimary="true">
           Konsultasi Gratis dengan Tim OneTem
         </ButtonCTA>
       </div>

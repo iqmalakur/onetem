@@ -15,7 +15,11 @@ import { whatsapp } from "@/data/social";
         digital bareng <span class="font-semibold">OneTem</span>.
       </p>
 
-      <ButtonCTA :href="whatsapp" :external="true" :isPrimary="false">
+      <ButtonCTA
+        :href="`https://wa.me/${whatsapp}`"
+        :external="true"
+        :isPrimary="false"
+      >
         Hubungi Tim OneTem Sekarang
       </ButtonCTA>
     </div>

@@ -24,7 +24,9 @@ import { whatsapp } from "@/data/social";
 
         <!-- CTA -->
         <div class="flex flex-wrap gap-4">
-          <ButtonCTA :href="whatsapp" :external="true"> WhatsApp </ButtonCTA>
+          <ButtonCTA :href="`https://wa.me/${whatsapp}`" :external="true">
+            WhatsApp
+          </ButtonCTA>
 
           <ButtonCTA href="/services" :isPrimary="false">
             Lihat Layanan

@@ -21,7 +21,7 @@ import { whatsapp } from "@/data/social";
           <span class="font-medium text-gray-800"> tanpa ribet. </span>
         </p>
 
-        <ButtonCTA :href="whatsapp" :external="true">
+        <ButtonCTA :href="`https://wa.me/${whatsapp}`" :external="true">
           Konsultasi Gratis Sekarang
         </ButtonCTA>
       </div>

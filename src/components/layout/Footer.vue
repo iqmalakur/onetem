@@ -67,13 +67,13 @@ import { email, whatsapp } from "@/data/social";
           <h5 class="text-sm font-semibold text-white mb-4">Hubungi Kami</h5>
           <ul class="space-y-3 text-sm">
             <li>
-              <a :href="email" class="hover:text-white transition">
+              <a :href="`mailto:${email}`" class="hover:text-white transition">
                 {{ email }}
               </a>
             </li>
             <li>
               <a
-                :href="whatsapp"
+                :href="`https://wa.me/${whatsapp}`"
                 target="_blank"
                 class="hover:text-white transition"
               >
