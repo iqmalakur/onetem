@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ButtonCTA from "../button/ButtonCTA.vue";
+import ButtonCTA from "@/components/button/ButtonCTA.vue";
 </script>
 
 <template>
