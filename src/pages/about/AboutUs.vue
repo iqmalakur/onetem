@@ -8,10 +8,12 @@ import WhoWeAre from "./sections/WhoWeAre.vue";
 </script>
 
 <template>
-  <Intro />
-  <Story />
-  <NameMeaning />
-  <WhoWeAre />
-  <VisionMission />
-  <Closing />
+  <main class="pt-28">
+    <Intro />
+    <Story />
+    <NameMeaning />
+    <WhoWeAre />
+    <VisionMission />
+    <Closing />
+  </main>
 </template>
