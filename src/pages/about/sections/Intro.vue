@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { useElementObserver } from "@/composables/useElementObserver";
 
 const { target: _target, isVisible } = useElementObserver();
