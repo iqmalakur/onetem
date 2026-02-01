@@ -3,6 +3,7 @@ import { ref } from "vue";
 import { RouterLink } from "vue-router";
 import { navigation } from "@/data/navigation";
 import { useThemeStore } from "@/stores/theme";
+import onetem from "@/assets/onetem.png";
 
 const themeStore = useThemeStore();
 const isOpen = ref(false);
@@ -14,6 +15,13 @@ const isOpen = ref(false);
   >
     <nav class="max-w-7xl mx-auto flex items-center justify-between px-10 py-4">
       <RouterLink to="/" class="flex items-center gap-2 group">
+        <div class="relative w-10 h-10 overflow-hidden rounded-lg">
+          <img
+            :src="onetem"
+            alt="OneTem Logo"
+            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
+          />
+        </div>
         <h1
           class="text-xl font-bold tracking-tight text-main group-hover:text-primary transition-colors"
         >
