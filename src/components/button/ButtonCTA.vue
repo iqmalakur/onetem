@@ -13,7 +13,7 @@ const props = withDefaults(
     isPrimary: true,
     external: false,
     block: false,
-  }
+  },
 );
 
 const isExternalLink = computed(() => {
@@ -33,7 +33,7 @@ const componentType = computed(() => {
     :href="isExternalLink ? href : undefined"
     :target="isExternalLink ? '_blank' : undefined"
     :rel="isExternalLink ? 'noopener noreferrer' : undefined"
-    class="inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold text-sm tracking-wide transition-all duration-300 active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2"
+    class="inline-flex cursor-pointer items-center justify-center px-8 py-4 rounded-xl font-semibold text-sm tracking-wide transition-all duration-300 active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2"
     :class="[
       block ? 'w-full' : '',
       'focus:ring-primary dark:focus:ring-offset-slate-900',
