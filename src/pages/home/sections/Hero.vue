@@ -1,79 +1,62 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from "vue";
 import ButtonCTA from "@/components/button/ButtonCTA.vue";
 import { whatsapp } from "@/data/social";
-import { MessageCircleMore } from "lucide-vue-next";
+import { useElementObserver } from "@/composables/useElementObserver";
+import {
+  MessageCircleMore,
+  Sparkles,
+  CheckCircle2,
+  TrendingUp,
+} from "lucide-vue-next";
 
-// === LOGIC ANIMASI ===
-const sectionRef = ref<HTMLElement | null>(null);
-const isVisible = ref(false);
-let observer: IntersectionObserver | null = null;
-
-onMounted(() => {
-  observer = new IntersectionObserver(
-    ([entry]) => {
-      if (entry) {
-        isVisible.value = entry.isIntersecting;
-      }
-    },
-    { threshold: 0.3 }
-  );
-
-  if (sectionRef.value) {
-    observer.observe(sectionRef.value);
-  }
-});
-
-onUnmounted(() => {
-  if (observer) observer.disconnect();
-});
+const { target: _target, isVisible } = useElementObserver();
 </script>
 
 <template>
   <section
-    ref="sectionRef"
-    class="pt-28 pb-24 bg-secondary transition-colors duration-300 px-6 md:px-10 overflow-hidden"
+    ref="_target"
+    class="pt-32 pb-24 bg-secondary transition-colors duration-500 px-6 md:px-10 overflow-hidden"
   >
-    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-      <div>
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+      <div class="relative z-10">
         <div
-          class="transition-all duration-700 ease-out"
+          class="transition-[transform,opacity] duration-1000 ease-out"
           :class="
-            isVisible
-              ? 'opacity-100 translate-y-0 blur-none'
-              : 'opacity-0 translate-y-12 blur-sm'
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
           "
         >
-          <h1
-            class="text-3xl md:text-4xl font-bold leading-tight mb-6 text-main"
+          <div
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-6"
           >
-            Your End-to-End <br />
-            <span class="text-primary">Digital Solution Partner</span>
-            <br />
-            Satu Partner untuk Semua Kebutuhan Digital Bisnis Lo
+            <Sparkles :size="16" class="animate-pulse" />
+            <span class="text-[10px] font-black uppercase tracking-[0.2em]"
+              >Partner Digital Terpercaya</span
+            >
+          </div>
+
+          <h1
+            class="text-4xl md:text-6xl font-black leading-[1.1] mb-8 text-text-main tracking-tight"
+          >
+            Level Up Bisnis Lo <br />
+            <span class="text-primary italic font-serif">Tanpa Ribet IT.</span>
           </h1>
         </div>
 
         <p
-          class="text-main/70 text-lg mb-10 max-w-xl transition-all duration-700 ease-out delay-100"
+          class="text-text-main/70 text-lg md:text-xl mb-10 max-w-xl transition-[transform,opacity] duration-1000 delay-200 ease-out"
           :class="
-            isVisible
-              ? 'opacity-100 translate-y-0 blur-none'
-              : 'opacity-0 translate-y-12 blur-sm'
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
           "
         >
-          <span class="font-semibold text-main">OneTem</span> adalah partner IT
-          untuk startup dan UMKM yang ingin naik level lewat website, aplikasi,
-          dan solusi digital yang benar-benar kepakai — bukan cuma bagus di
-          tampilan.
+          <span class="font-bold text-text-main">OneTem</span> bantu startup dan
+          UMKM punya website, aplikasi, hingga sistem otomatis yang bikin
+          operasional makin sat-set dan jualan makin meningkat.
         </p>
 
         <div
-          class="flex flex-wrap gap-4 transition-all duration-700 ease-out delay-200"
+          class="flex flex-wrap gap-4 transition-[transform,opacity] duration-1000 delay-400 ease-out"
           :class="
-            isVisible
-              ? 'opacity-100 translate-y-0 blur-none'
-              : 'opacity-0 translate-y-12 blur-sm'
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
           "
         >
           <ButtonCTA :href="`https://wa.me/${whatsapp}`" :external="true">
@@ -81,103 +64,87 @@ onUnmounted(() => {
             Konsultasi Gratis
           </ButtonCTA>
 
-          <ButtonCTA href="/services" :isPrimary="false">
-            Lihat Layanan
+          <ButtonCTA href="/portfolio" :isPrimary="false">
+            Lihat Hasil Kerja
           </ButtonCTA>
         </div>
       </div>
 
       <div
-        class="hidden md:flex md:justify-center transition-all duration-700 ease-out delay-300"
+        class="relative transition-[transform,opacity] duration-1200 delay-500 ease-[cubic-bezier(0.23,1,0.32,1)]"
         :class="
           isVisible
-            ? 'opacity-100 translate-y-0 blur-none'
-            : 'opacity-0 translate-y-12 blur-sm'
+            ? 'opacity-100 translate-x-0 scale-100'
+            : 'opacity-0 translate-x-20 scale-90'
         "
       >
         <div
-          class="lg:sticky lg:top-32 transition-all duration-1000 ease-out delay-100 transform hover:scale-[1.02]"
+          class="relative bg-bg-main rounded-[2.5rem] shadow-2xl shadow-primary/10 border border-primary/5 p-2 overflow-hidden"
+        >
+          <div class="bg-secondary rounded-4xl p-6 min-h-75">
+            <div class="flex items-center justify-between mb-8">
+              <div class="flex gap-1.5">
+                <div class="w-2.5 h-2.5 rounded-full bg-primary/20"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-primary/20"></div>
+              </div>
+              <div class="h-2 w-24 bg-primary/10 rounded-full"></div>
+            </div>
+
+            <div class="space-y-4">
+              <div
+                class="h-12 w-full bg-bg-main rounded-2xl flex items-center px-4 gap-3"
+              >
+                <div
+                  class="w-6 h-6 rounded-lg bg-primary/10 flex items-center justify-center"
+                >
+                  <CheckCircle2 :size="14" class="text-primary" />
+                </div>
+                <div class="h-2 w-32 bg-primary/5 rounded-full"></div>
+              </div>
+              <div
+                class="h-12 w-[90%] bg-bg-main rounded-2xl flex items-center px-4 gap-3"
+              >
+                <div
+                  class="w-6 h-6 rounded-lg bg-primary/10 flex items-center justify-center"
+                >
+                  <CheckCircle2 :size="14" class="text-primary" />
+                </div>
+                <div class="h-2 w-24 bg-primary/5 rounded-full"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="absolute -top-6 -right-6 bg-primary text-white p-6 rounded-4xl shadow-xl transition-transform duration-1000 delay-700 group hover:-translate-y-2"
+          :class="
+            isVisible ? 'translate-y-0 scale-100' : 'translate-y-10 scale-50'
+          "
+        >
+          <TrendingUp :size="24" stroke-width="3" />
+          <p class="text-[10px] font-black uppercase mt-2 tracking-widest">
+            Growth
+          </p>
+        </div>
+
+        <div
+          class="absolute -bottom-10 -left-10 bg-bg-main border border-primary/10 p-5 rounded-3xl shadow-xl flex items-center gap-4 transition-transform duration-1000 delay-1000"
+          :class="
+            isVisible ? 'translate-y-0 scale-100' : 'translate-y-10 scale-50'
+          "
         >
           <div
-            class="relative w-full mx-auto bg-[#1e1e2e] rounded-xl shadow-2xl overflow-hidden border border-white/10 font-mono text-sm leading-relaxed"
+            class="w-10 h-10 rounded-2xl bg-secondary flex items-center justify-center"
           >
-            <div
-              class="bg-[#27273a] px-4 py-3 flex items-center justify-between border-b border-white/5"
+            <Sparkles :size="20" class="text-primary" />
+          </div>
+          <div>
+            <p
+              class="text-[10px] font-black text-primary uppercase tracking-[0.2em]"
             >
-              <div class="flex gap-2">
-                <div class="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
-                <div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
-                <div class="w-3 h-3 rounded-full bg-[#27c93f]"></div>
-              </div>
-              <div class="text-white/40 text-xs tracking-wider">
-                onetem@server ~
-              </div>
-              <div class="w-10"></div>
-            </div>
-
-            <div class="p-6 text-white/90 min-h-80 flex flex-col gap-3">
-              <div>
-                <span class="text-green-400">➜</span>
-                <span class="text-blue-400">~</span>
-                <span class="text-yellow-400">whoami</span>
-                <div class="mt-1 text-white/80">
-                  Hi! We are
-                  <span class="font-bold text-white">OneTem Squad</span>.<br />
-                  Your technical co-founder partner.
-                </div>
-              </div>
-
-              <div class="mt-2">
-                <span class="text-green-400">➜</span>
-                <span class="text-blue-400">~</span>
-                <span class="text-yellow-400">cat</span> services.json
-                <div class="mt-1 pl-2 border-l-2 border-white/10 text-white/70">
-                  {<br />
-                  &nbsp;&nbsp;"core":
-                  <span class="text-green-300">"Web & Mobile Apps"</span>,<br />
-                  &nbsp;&nbsp;"focus":
-                  <span class="text-green-300">"Scalability & Performance"</span
-                  >,<br />
-                  &nbsp;&nbsp;"style":
-                  <span class="text-green-300">"Clean Code"</span><br />
-                  }
-                </div>
-              </div>
-
-              <div class="mt-2">
-                <span class="text-green-400">➜</span>
-                <span class="text-blue-400">~</span> list stack
-                <div class="mt-1 flex flex-wrap gap-2 text-xs font-bold">
-                  <span class="bg-blue-500/20 text-blue-300 px-2 py-1 rounded"
-                    >TypeScript</span
-                  >
-                  <span class="bg-green-500/20 text-green-300 px-2 py-1 rounded"
-                    >Vue.js</span
-                  >
-                  <span class="bg-red-500/20 text-red-300 px-2 py-1 rounded"
-                    >Laravel</span
-                  >
-                  <span class="bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded"
-                    >Flutter</span
-                  >
-                </div>
-              </div>
-
-              <div class="mt-4">
-                <span class="text-green-400">➜</span>
-                <span class="text-blue-400">~</span>
-                <span class="text-white/50 italic"
-                  >Ready to build your product? 🚀</span
-                >
-                <span
-                  class="inline-block w-2.5 h-4 bg-white/70 align-middle ml-1 animate-pulse"
-                ></span>
-              </div>
-            </div>
-
-            <div
-              class="absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 opacity-50"
-            ></div>
+              Solution
+            </p>
+            <p class="text-xs font-bold text-text-main">Custom & Scalable</p>
           </div>
         </div>
       </div>
