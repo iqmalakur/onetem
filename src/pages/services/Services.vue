@@ -5,7 +5,7 @@ import ServicesOffered from "./sections/ServicesOffered.vue";
 </script>
 
 <template>
-  <main class="pt-28 pb-24">
+  <main class="pt-28">
     <Opening />
     <ServicesOffered />
     <Approach />

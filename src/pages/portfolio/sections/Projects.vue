@@ -1,44 +1,32 @@
 <script setup lang="ts">
 import { portfolios } from "@/data/portfolios";
+import { useElementObserver } from "@/composables/useElementObserver";
+import ProjectCard from "./ProjectCard.vue";
+
+const { target: _target, isVisible } = useElementObserver();
 </script>
 
 <template>
-  <div class="grid gap-10 md:grid-cols-2">
-    <div
-      v-for="(item, index) in portfolios"
-      :key="index"
-      class="border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition"
-    >
-      <!-- Image / Blank Box -->
-      <div
-        class="w-full h-48 bg-gray-100 flex items-center justify-center text-gray-400 text-sm"
-      >
-        Project Preview
+  <section ref="_target" class="py-24 bg-bg-main">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid gap-8 md:grid-cols-2">
+        <ProjectCard
+          v-for="(item, index) in portfolios"
+          :key="index"
+          v-bind="item"
+          :index="index"
+          :is-visible="isVisible"
+        />
       </div>
 
-      <!-- Content -->
-      <div class="p-6">
-        <span class="text-sm text-blue-600 font-medium">
-          {{ item.category }}
-        </span>
-
-        <h3 class="text-xl font-semibold mt-2 mb-3">
-          {{ item.title }}
-        </h3>
-
-        <p class="text-gray-600 text-sm leading-relaxed mb-5">
-          {{ item.description }}
+      <div
+        v-if="!portfolios.length"
+        class="text-center py-20 border-2 border-dashed border-secondary rounded-[3rem]"
+      >
+        <p class="text-text-main/40 font-medium">
+          Belum ada proyek untuk ditampilkan.
         </p>
-
-        <!-- Link -->
-        <a
-          :href="item.link"
-          target="_blank"
-          class="inline-flex items-center text-sm font-medium text-blue-600 hover:underline"
-        >
-          Lihat Detail Project →
-        </a>
       </div>
     </div>
-  </div>
+  </section>
 </template>
