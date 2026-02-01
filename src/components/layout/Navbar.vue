@@ -19,7 +19,7 @@ const isOpen = ref(false);
           <img
             :src="onetem"
             alt="OneTem Logo"
-            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
+            class="w-full h-full object-contain"
           />
         </div>
         <h1
